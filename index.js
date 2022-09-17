@@ -1,18 +1,9 @@
-let randomNumber = Math.floor(Math.random() * 100) +1;
-
-const guesses = document.querySelector('.guesses');
-
-const lastResult =  document.querySelector('.lastResult');
-
-const lowOrHi =  document.querySelector('.lowOrHi');
-
-const guessSubmit =  document.querySelector('.guessSubmit');
-
-const guessField =  document.querySelector('.guessField');
-
-let guesssCount = 1;
-let resetButton;
-
-function checkGuess() {
-    alert('I Am a Placeholder');
-};
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
