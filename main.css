@@ -13,17 +13,18 @@ html {
     font-family: 'Inter', sans-serif;
 }
 
-button {
-    cursor: pointer;
+.head {
+    display: none;
 }
 
 ul {
     position: relative;
     list-style-type: none;
     display: flex;
-    gap: 90px;
-    left: 25rem;
-    top: -2rem;
+    gap: 100px;
+    padding: 0 1rem 0 0;
+    left: 1rem;
+    top: .7rem;
 }
 
 a {
@@ -32,18 +33,31 @@ a {
     cursor: pointer;
 }
 
-header {
-    display: inline-flex;
-    width: 95%;
-    margin: 0 auto;
+a:hover {
+    color: #000;
+    text-decoration: underline;
 }
 
-.header {
+header {
+    display: inline-flex;
+    width: 100%;
+    gap: 100px;
+    overflow: hidden;
+}
+
+.header a {
     margin: 7px;
     display: flex;
+    color: black;
+}
+
+h1 a:hover {
+    color:rgb(0, 0, 255);
+    text-decoration: none;
 }
 
 button {
+    cursor: pointer;
     background-color: rgb(0, 0, 0);
     color: #fff;
     border-radius: 3px 3px 3px 3px;
@@ -52,12 +66,11 @@ button {
 
 .header button {
     height: 2rem;
-    margin: 5px 100px 0 170px; 
+    margin: .7rem 0 0 0;
 }
 
 .intro {
     display: flex;
-    width: 100%;
     gap: 150px;
     padding: 1rem 0 0 0;
     margin: 0 2.4rem;
@@ -82,7 +95,7 @@ button {
 }
 
 .intro2 img {
-    height: 500px;
+    height:500px;
 
 }
 
@@ -90,17 +103,17 @@ button {
     overflow: hidden;
     font-weight: 750;
     display: flex;
-    height: 5.3rem;
-    width: 30rem;
+    height: 5rem;
+    width: 29rem;
     box-shadow: 1px 1px 10px 3px #000;
     margin: 3rem 0 0 .9rem;
     padding: 1.20rem 2rem;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 
 .sendCa button {
     height: 2.3rem;
-    margin: 0 0 0 1.8rem;
+    margin: 0 0 0 4rem;
 }
 
 .sendAmt {
@@ -155,13 +168,21 @@ button {
     margin:  -8rem 0 0 50px;
 }
 
+.body a {
+    font-size: 12px;
+}
+
 .body h3 {
     font-size: 20px;
     font-weight: 550;
 }
 
-.bod1, .bod2 {
+.bod1 {
     width: 18rem;
+}
+
+.bod2 {
+    width: 17rem;
 }
 
 .bod2 p{
@@ -172,8 +193,157 @@ button {
     width: 15rem;
 }
 
-@media screen and (max-width:414px) {
-    html {
-        height: 2vmin;
+@media (max-width: 414px) {
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
     }
+    
+    h1:hover {
+        color: black;
+    }
+
+    header {
+      display: flex;
+      width: 100%;
+      gap: 0;
+    }
+    
+    .icon:hover {
+        text-decoration: none;
+    }
+
+    .header2 {
+        display: none;
+    }
+
+    .head {
+        position: relative;
+        display: block;
+        text-align: right;
+    }
+
+    button {
+        position: relative;
+        width: 20vmin;
+        height: 9vmin;
+    }
+
+    /* Style the navigation menu */
+    .icon {
+        display: block;
+        overflow: hidden;
+        color: #000;
+        position: relative;
+        text-align: right;
+        padding: 0%;
+        margin: auto 0%;
+        left: 40vmin;
+      }
+      
+      /* Hide the links inside the navigation menu (except for logo/home) */
+      ul {
+        display: none;
+      }
+      
+      /* Style navigation menu links */
+      ul a {
+        color: #000;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      
+      /* Style the hamburger menu */
+      ul a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      /* Add a grey background color on mouse-over */
+      .ul a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .intro {
+        display: block;
+        margin: 2%;
+      }
+    
+      .body {
+        display: inline-block;
+        width: 100%;
+        margin: 4vmin;
+      }
+
+      .body p {
+        width: 75%;
+      }
+
+      .body a {
+        padding: 1vmin 0;
+      }
+    
+      .intro1 {
+        width: 100%;
+        height: fit-content;
+      }
+    
+      .intro1 h1 {
+        height: fit-content;
+        font-weight: 600;
+        font-size: 10vmin;
+      }
+    
+      .intro2 {
+        width: 80%;
+        justify-content: center;
+      }
+    
+      .sendCa {
+        display: flex;
+        box-shadow: 1px 1px 5px 1px #000;
+        justify-content: center;
+        padding: 1vmin;
+        margin: 10px auto;
+        width: 95%;
+        height: max-content;
+        border-radius: 5px;
+      }
+    
+      .sendCa button {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    
+      .vLine {
+        content: "";
+        position: relative;
+        width: 2px;
+        background: #000;
+        margin: 0 3vmin;
+      }
+    
+      .sendCa img {
+        height: 5vmin;
+      }
+    
+      .intro2 img {
+        height: 80vmin;
+      }
+    
+      .intro2 {
+        margin: 80px auto 30px auto;
+        justify-content: center;
+        place-items: center;
+      }
+    
+      .bod1, .bod2 {
+        width: 100%;
+      }
 }
